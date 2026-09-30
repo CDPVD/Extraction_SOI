@@ -1,10 +1,10 @@
 import os
-pathPreFix = "replaceMe votre chemin d'accès pour votre dossier"
+pathPreFix = "/home/alluardj/10_projets/seeds_vivantes/"
 
 conn = {
     "account" : "GRICS-DFONDATION",
-    "user" : "ReplaceMe votre courriel ayant accès à dFondation",
-    "password" : os.getenv('ReplaceMe votre variable environement contenant la clef'),
+    "user" : "alluardj@csvdc.qc.ca",
+    "password" : os.getenv('DFONDATION'),
     "warehouse" : "COMPUTE_WH_CLIENTS",
     "database" : "DFONDATION",
 }
