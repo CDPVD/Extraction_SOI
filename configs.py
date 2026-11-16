@@ -1,5 +1,8 @@
 import os
-pathPreFix = "/home/alluardj/10_projets/seeds_vivantes/"
+from pathlib import Path
+
+pathPreFix = Path(__file__).resolve().parent.parent / "seeds_vivantes"
+
 
 conn = {
     "account" : "GRICS-DFONDATION",

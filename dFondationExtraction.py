@@ -45,7 +45,7 @@ def extractSchema(conf: dict):
                 .replace(';', '', regex=True)
             )
 
-            output_file = configs.pathPreFix + tableName + ".csv"
+            output_file = configs.pathPreFix / f"{tableName}.csv"
 
             df.to_csv(
                 output_file,
