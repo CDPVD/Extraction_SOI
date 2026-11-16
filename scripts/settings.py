@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-pathPreFix = Path(__file__).resolve().parent.parent / "seeds_vivantes"
+pathPreFix = Path(__file__).resolve().parent.parent.parent / "seeds_vivantes"
 
 
 conn = {

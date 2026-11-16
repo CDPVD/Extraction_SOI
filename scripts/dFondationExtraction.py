@@ -1,6 +1,6 @@
 from snowflake.connector import connect
 import pandas as pd
-import configs
+import settings
 import logging
 from datetime import datetime
 
@@ -16,11 +16,11 @@ def extractSchema(conf: dict):
     logging.info(f"Connexion au schéma {conf['schema']} avec le rôle {conf['role']}")
 
     connection = connect(
-        user=configs.conn["user"],
-        password=configs.conn["password"],
-        account=configs.conn["account"],
-        warehouse=configs.conn["warehouse"],
-        database=configs.conn["database"],
+        user=settings.conn["user"],
+        password=settings.conn["password"],
+        account=settings.conn["account"],
+        warehouse=settings.conn["warehouse"],
+        database=settings.conn["database"],
         schema=conf["schema"],
         role=conf["role"]
     )
@@ -45,7 +45,7 @@ def extractSchema(conf: dict):
                 .replace(';', '', regex=True)
             )
 
-            output_file = configs.pathPreFix / f"{tableName}.csv"
+            output_file = settings.pathPreFix / f"{tableName}.csv"
 
             df.to_csv(
                 output_file,
@@ -67,7 +67,7 @@ def extractSchema(conf: dict):
 
 logging.info("Début des extractions")
 
-for schemaName, conf in configs.dfondation.items():
+for schemaName, conf in settings.dfondation.items():
 
     logging.info(f"Traitement de la configuration : {schemaName}")
 
