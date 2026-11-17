@@ -1,0 +1,36 @@
+SOI:
+  schema: AFFAIRES_SCOLAIRE_SOI
+
+  tables:
+
+    DIM_DESCRIPTEUR:
+      fields:
+        - CATEGORIE_DESCRIPTION
+        - CATEGORIE_TYPE_CODE
+        - CATEGORIE_TYPE_DESCRIPTION
+        - DESCRIPTEUR_CODE
+        - DESCRIPTEUR_DESCRIPTION
+
+    DIM_GROUPE:
+      fields:
+        - GROUPE_ID
+        - GROUPE_CODE
+        - ANNEE_SCOLAIRE
+
+SCO:
+  schema: AFFAIRES_SCOLAIRE
+
+  tables:
+
+    DIM_ELEVE:
+      fields:
+        - ELEVE_ID
+        - CODE_UNIQUE_ELEVE
+        - FICHE
+        - CODE_PERMANENT
+
+    DIM_ECOLE:
+      fields:
+        - ECOLE_ID
+        - ECOLE_CODE
+        - ECOLE_CODE_OFFICIEL
