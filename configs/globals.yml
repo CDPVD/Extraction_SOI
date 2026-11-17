@@ -1,0 +1,28 @@
+credentials:
+
+  # Driver ODBC (17 ou 18)
+  driver_odbc: 'ODBC Driver 17 for SQL Server'
+
+  # SQL Server (ajouter des guillemets si votre serveur contient le caractère '\' )
+  sql_server: replaceMeInLocals
+  sql_port: 1433
+
+  # Facultatif : serveur lié (laisser vide si connexion directe)
+  linked_server_geobus:
+
+  # Base de données cible
+  database: extract_SOI
+  schema: dbo
+
+  # Authentification
+  use_password: True
+  sql_user: replaceMeInLocals
+  sql_password: replaceMeInLocals
+
+snowflake:
+
+  account: GRICS-DFONDATION
+  user_snowflake: replaceMeInLocals
+  warehouse: COMPUTE_WH_CLIENTS
+  database: DFONDATION
+  role: DFONDATION_COMMUN
