@@ -97,7 +97,6 @@ for extract_name, conf in schema_config.items():
     for table_name, table_conf in conf["tables"].items():
 
         fields = ", ".join(table_conf["fields"])
-
         query = f"""
         SELECT
             {fields}
@@ -141,7 +140,6 @@ for extract_name, conf in schema_config.items():
 
         # Préparation du INSERT
         cursor.fast_executemany = True
-
         placeholders = ",".join(
             ["?"] * len(df.columns)
         )
@@ -168,7 +166,6 @@ print("Extraction terminée")
 
 sf_cursor.close()
 cursor.close()
-
 sf_cnx.close()
 cnx.close()
 
